@@ -43,16 +43,74 @@ button:hover {
   color: #e5e5e5;
 }
 
-.searchEngine__book-gird__book {
-  display: inline-block;
-  border: 1px solid #e5e5e5;
-  box-shadow: 10px 5px 5px rgba(163, 165, 167, 0.3764705882);
-  font-family: "Gloria Hallelujah", cursive;
-  background-color: white;
-  border-radius: 5px;
-  padding: 10px;
+.searchEngine__book-grid {
+  display: grid;
+  grid-template-areas: "bookOne bookTwo bookThree" "bookFour bookFive bookSix" "bookSeven bookEight bookNine";
+  grid-template-columns: 300px, 300px, 300px;
+  grid-template-rows: 300px, 300px, 300px;
   margin: 10px;
-  height: 300px;
-  width: 300px;
-  font-size: 20px;
+  padding: 10px;
+}
+
+.searchEngine__book-gird__bookOne {
+  grid-area: "bookOne";
+  border: 1px solid black;
+  margin: 10px;
+  padding: 10px;
+}
+
+.searchEngine__book-gird__bookTwo {
+  grid-area: "bookTwo";
+  border: 1px solid black;
+  margin: 10px;
+  padding: 10px;
+}
+
+.searchEngine__book-gird__bookThree {
+  grid-area: "bookThree";
+  border: 1px solid black;
+  margin: 10px;
+  padding: 10px;
+}
+
+.searchEngine__book-gird__bookFour {
+  grid-area: "bookFour";
+  border: 1px solid black;
+  margin: 10px;
+  padding: 10px;
+}
+
+.searchEngine__book-gird__bookFive {
+  grid-area: "bookFive";
+  border: 1px solid black;
+  margin: 10px;
+  padding: 10px;
+}
+
+.searchEngine__book-gird__bookSix {
+  grid-area: "bookSix";
+  border: 1px solid black;
+  margin: 10px;
+  padding: 10px;
+}
+
+.searchEngine__book-gird__bookSeven {
+  grid-area: "bookSeven";
+  border: 1px solid black;
+  margin: 10px;
+  padding: 10px;
+}
+
+.searchEngine__book-gird__bookEight {
+  grid-area: "bookEight";
+  border: 1px solid black;
+  margin: 10px;
+  padding: 10px;
+}
+
+.searchEngine__book-gird__bookNine {
+  grid-area: "bookNine";
+  border: 1px solid black;
+  margin: 10px;
+  padding: 10px;
 }
