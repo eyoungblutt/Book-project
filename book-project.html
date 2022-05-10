@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="book-project.css" />
     <link />
     <script defer src="book-project.js"></script>
-    <script src="API.js"></script>
-    <script src="index.js"></script>
+    <script defer src="API.js"></script>
+    <script defer src="index.js"></script>
   </head>
   <body>
     <main class="searchEngine">
@@ -26,20 +26,16 @@
   </div>
   <div>
     
-    <textarea class="searchEngine__form"
+    <input id="searchEngine__form"
     type="text"
-    name="message"
-    id="message"
-    rows="1"
-    cols="50"
-    required>Tell Kat what you're after...</textarea>
+    placeholder="Tell Kat what you're after..."
+    required></input>
 
     <div class="searchEngine__buttons">
     <button type="reset">Oops, start again</button>
-    <button class="searchEngine__buttons__search-button" type="submit">Get Hunting!</button>
+    <button class="searchEngine__buttons__search-button" id="searchBTN" type="submit">Get Hunting!</button>
   
     </div>
-
   <div class="searchEngine__book-grid">
 <div class="searchEngine__book-gird__bookOne"> book one
 </div>
