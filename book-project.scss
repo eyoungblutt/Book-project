@@ -59,66 +59,76 @@ button {
     "bookSeven bookEight bookNine";
   grid-template-columns: 300px, 300px, 300px;
   grid-template-rows: 300px, 300px, 300px;
-  margin: 10px;
-  padding: 10px;
 }
 
-.searchEngine__book-gird__bookOne {
-  grid-area: "bookOne";
-  border: 1px solid black;
-  margin: 10px;
-  padding: 10px;
-  display: flex;
-  flex-wrap: wrap;
-}
-.searchEngine__book-gird__bookTwo {
-  grid-area: "bookTwo";
-  border: 1px solid black;
-  margin: 10px;
-  padding: 10px;
-}
-.searchEngine__book-gird__bookThree {
-  grid-area: "bookThree";
-  border: 1px solid black;
-  margin: 10px;
-  padding: 10px;
-}
-.searchEngine__book-gird__bookFour {
-  grid-area: "bookFour";
-  border: 1px solid black;
-  margin: 10px;
-  padding: 10px;
-}
-.searchEngine__book-gird__bookFive {
-  grid-area: "bookFive";
-  border: 1px solid black;
-  margin: 10px;
-  padding: 10px;
-}
-.searchEngine__book-gird__bookSix {
-  grid-area: "bookSix";
-  border: 1px solid black;
-  margin: 10px;
-  padding: 10px;
-}
-.searchEngine__book-gird__bookSeven {
-  grid-area: "bookSeven";
-  border: 1px solid black;
-  margin: 10px;
-  padding: 10px;
-}
-.searchEngine__book-gird__bookEight {
-  grid-area: "bookEight";
-  border: 1px solid black;
-  margin: 10px;
-  padding: 10px;
-}
-.searchEngine__book-gird__bookNine {
-  grid-area: "bookNine";
-  border: 1px solid black;
-  margin: 10px;
-  padding: 10px;
-}
+// .searchEngine__book-grid div {
+//   background-color: white;
+//   margin: 10px;
+//   // outsideDiv.style.padding = "5px";
+//   // outsideDiv.style.backgroundColor = "white";
+//   // outsideDiv.style.borderRadius = "5px";
+//   max-height: 300px;
+//   max-width: 300px;
+//   // outsideDiv.style.fontFamily = "Gloria Hallelujah";
+// }
+
+// .searchEngine__book-gird__bookOne {
+//   grid-area: "bookOne";
+//   border: 1px solid black;
+//   margin: 10px;
+//   padding: 10px;
+//   display: flex;
+//   flex-wrap: wrap;
+//   text-overflow: ellipsis;
+// }
+// .searchEngine__book-gird__bookTwo {
+//   grid-area: "bookTwo";
+//   border: 1px solid black;
+//   margin: 10px;
+//   padding: 10px;
+// }
+// .searchEngine__book-gird__bookThree {
+//   grid-area: "bookThree";
+//   border: 1px solid black;
+//   margin: 10px;
+//   padding: 10px;
+// }
+// .searchEngine__book-gird__bookFour {
+//   grid-area: "bookFour";
+//   border: 1px solid black;
+//   margin: 10px;
+//   padding: 10px;
+// }
+// .searchEngine__book-gird__bookFive {
+//   grid-area: "bookFive";
+//   border: 1px solid black;
+//   margin: 10px;
+//   padding: 10px;
+// }
+// .searchEngine__book-gird__bookSix {
+//   grid-area: "bookSix";
+//   border: 1px solid black;
+//   margin: 10px;
+//   padding: 10px;
+// }
+// .searchEngine__book-gird__bookSeven {
+//   grid-area: "bookSeven";
+//   border: 1px solid black;
+//   margin: 10px;
+//   padding: 10px;
+// }
+// .searchEngine__book-gird__bookEight {
+//   grid-area: "bookEight";
+//   border: 1px solid black;
+//   margin: 10px;
+//   padding: 10px;
+// }
+// .searchEngine__book-gird__bookNine {
+//   grid-area: "bookNine";
+//   border: 1px solid black;
+//   margin: 10px;
+//   padding: 10px;
+// }
 
 // .searchEngine__book-gird__book {
 //   display: inline-block;

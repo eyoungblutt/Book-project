@@ -1,12 +1,18 @@
-let inputValue = document.getElementById("searchEngine__form").change;
-let searchTerm = (document.getElementById("searchEngine__form").innerHTML =
-  inputValue);
+const searchTerm =
+  document.getElementById("searchEngine__form").innerText.value;
+
+// let inputValue = document.getElementById("searchEngine__form").change;
+// let searchTerm = (document.getElementById("searchEngine__form").innerHTML =
+//   inputValue);
 
 console.log(searchTerm);
 
 const urlMain = "https://www.googleapis.com/books/v1/volumes?q=";
 
 let searchButton = document.getElementById("searchBTN");
+const getSearchUrls = (searchTerm) => {
+  return urlMain + searchTerm;
+};
 
 // searchButton.addEventListener("click", () => {
 //   return document.getElementById("searchEngine__form").change;
@@ -29,16 +35,15 @@ searchButton.addEventListener("click", () => {
 //const searchButton = document.getElementById("searchBTN");
 // let searchTerm = document.getElementById("searchEngine__form").value;
 
-const getSearchUrls = (searchTerm) => {
-  return urlMain + searchTerm;
-};
-
 const createBookCard = (bookObject) => {
   const outsideDiv = document.createElement("div");
   const image = document.createElement("img");
   image.src = bookObject.volumeInfo.imageLinks.thumbnail;
   console.log(image);
   outsideDiv.appendChild(image);
+
+  image.style.maxHeight = "200px";
+  image.style.maxwidth = "200px";
 
   const heading = document.createElement("h3");
   const headingText = document.createTextNode(
@@ -58,6 +63,16 @@ const createBookCard = (bookObject) => {
   outsideDiv.appendChild(paragraphDescription);
   paragraphDescription.appendChild(paragraphText);
 
+  paragraphDescription.style.textOverflow = "ellipsis";
+
+  outsideDiv.style.backgroundColor = "white";
+  outsideDiv.style.margin = "10px";
+  outsideDiv.style.padding = "5px";
+  outsideDiv.style.backgroundColor = "white";
+  outsideDiv.style.borderRadius = "5px";
+  outsideDiv.style.maxHeight = "500px";
+  outsideDiv.style.maxWidth = "300px";
+  outsideDiv.style.fontFamily = "Gloria Hallelujah";
   return outsideDiv;
 };
 
