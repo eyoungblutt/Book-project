@@ -26,6 +26,9 @@ searchButton.addEventListener("click", () => {
   );
 });
 
+const searchButton = document.getElementById("searchBTN");
+// let searchTerm = document.getElementById("searchEngine__form").value;
+
 const getSearchUrls = (searchTerm) => {
   return urlMain + searchTerm;
 };
@@ -59,26 +62,6 @@ const createBookCard = (bookObject) => {
 };
 
 const responsePromise = fetch(getSearchUrls(searchTerm));
-const response = await responsePromise;
-const object = await response.json();
-
-// document
-//   .getElementsByClassName("searchEngine__book-grid")[0]
-//   .appendChild(bookDetails[0]);
-//const bookOutput = {};
-//get element by id for div you want to put bookDetails in and append child.
-
-//if (volume.volumeInfo.authors)
-//  bookOutput.image = volume.volumeInfo.imageLinks.thumbnail;
-//bookOutput.title = volume.volumeInfo.title;
-//bookOutput.author = volume.volumeInfo.authors[0];
-//bookOutput.description = volume.volumeInfo.description;
-// console.log(bookOutput);
-//document.getElementById;
-//for (let key in bookOutput) {
-// console.log(key + ":", bookOutput[key]);
-//}
-//
 
 //const outsideDiv = document.createElement("div")
 //const heading = document.createElement("h3");
@@ -116,4 +99,3 @@ const object = await response.json();
 //       "searchEngine__book-gird__bookOne"
 //     ).innerText = bookDetails;
 //   };
-// });
