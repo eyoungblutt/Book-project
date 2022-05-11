@@ -26,7 +26,7 @@ searchButton.addEventListener("click", () => {
   );
 });
 
-const searchButton = document.getElementById("searchBTN");
+//const searchButton = document.getElementById("searchBTN");
 // let searchTerm = document.getElementById("searchEngine__form").value;
 
 const getSearchUrls = (searchTerm) => {
@@ -62,6 +62,8 @@ const createBookCard = (bookObject) => {
 };
 
 const responsePromise = fetch(getSearchUrls(searchTerm));
+const response = await responsePromise;
+const object = await response.json();
 
 //const outsideDiv = document.createElement("div")
 //const heading = document.createElement("h3");
