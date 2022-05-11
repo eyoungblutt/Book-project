@@ -2,18 +2,32 @@ const urlMain = "https://www.googleapis.com/books/v1/volumes?q=";
 
 let searchTerm = "dog";
 
+const searchButton = document.getElementById("searchBTN");
+// let searchTerm = document.getElementById("searchEngine__form").value;
+
 const getSearchUrls = (searchTerm) => {
   return urlMain + searchTerm;
 };
 
 const responsePromise = fetch(getSearchUrls(searchTerm));
-// console.log(responsePromise);
+console.log(responsePromise);
 const response = await responsePromise;
-// console.log(response);
+console.log(response);
 const object = await response.json();
-// console.log(object);
+console.log(object);
+
+// object - items[10] - inside array volumeInfo for each book same as below. - need to go through array and get volume info foe each book/number in array.
+
+// const findBookDetails = (object) => {
+//   let bookObjects = object.items;
+//   for (let i = 0; i < bookObjects.length; i++) {
+//     bookDetails[i] += bookObjects[i];
+//     console.log(bookObjects);
+//   }
+// };
 const bookDetails = object.items.map((volume) => {
   const bookOutput = {};
+  let bookDisplay = bookOutput;
   if (volume.volumeInfo.authors)
     bookOutput.image = volume.volumeInfo.imageLinks.thumbnail;
   bookOutput.title = volume.volumeInfo.title;
@@ -34,9 +48,6 @@ const bookDetails = object.items.map((volume) => {
   document.getElementById("searchEngine__book-gird__bookOne").innerText =
     bookOutput.title;
 });
-
-// document.getElementById("searchEngine__book-gird__bookOne").innerText =
-//   bookOutput;
 
 // document.getElementById("searchEngine__book-gird__bookOne").innerText =
 //   object.volume.volumeInfo.title;
@@ -70,4 +81,3 @@ const bookDetails = object.items.map((volume) => {
 //       "searchEngine__book-gird__bookOne"
 //     ).innerText = bookDetails;
 //   };
-// });
