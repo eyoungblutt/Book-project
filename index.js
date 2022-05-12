@@ -1,9 +1,4 @@
-const searchTerm =
-  document.getElementById("searchEngine__form").innerText.value;
-
-// let inputValue = document.getElementById("searchEngine__form").change;
-// let searchTerm = (document.getElementById("searchEngine__form").innerHTML =
-//   inputValue);
+let searchTerm = document.getElementById("searchEngine__form").innerText.value;
 
 console.log(searchTerm);
 
@@ -14,11 +9,9 @@ const getSearchUrls = (searchTerm) => {
   return urlMain + searchTerm;
 };
 
-// searchButton.addEventListener("click", () => {
-//   return document.getElementById("searchEngine__form").change;
-// });
+console.log(searchTerm);
 console.log(searchButton);
-console.log(document.getElementById("searchEngine__form"));
+console.log(document.getElementById("searchEngine__form").value);
 
 searchButton.addEventListener("click", () => {
   const bookDetails = object.items.map((volume) => createBookCard(volume));
@@ -31,9 +24,6 @@ searchButton.addEventListener("click", () => {
       .appendChild(element)
   );
 });
-
-//const searchButton = document.getElementById("searchBTN");
-// let searchTerm = document.getElementById("searchEngine__form").value;
 
 const createBookCard = (bookObject) => {
   const outsideDiv = document.createElement("div");
