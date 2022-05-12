@@ -1,7 +1,3 @@
-let searchTerm = document.getElementById("searchEngine__form").innerText.value;
-
-console.log(searchTerm);
-
 const urlMain = "https://www.googleapis.com/books/v1/volumes?q=";
 
 let searchButton = document.getElementById("searchBTN");
@@ -9,20 +5,18 @@ const getSearchUrls = (searchTerm) => {
   return urlMain + searchTerm;
 };
 
-console.log(searchTerm);
-console.log(searchButton);
-console.log(document.getElementById("searchEngine__form").value);
+const callAPI = async (searchTerm) => {
+  const responsePromise = fetch(getSearchUrls(searchTerm));
+  const response = await responsePromise;
+  const object = await response.json();
+
+  console.log(object);
+  object.items.map(createBookCard);
+};
 
 searchButton.addEventListener("click", () => {
-  const bookDetails = object.items.map((volume) => createBookCard(volume));
-  console.log(document.getElementsByClassName("searchEngine__book-grid")[0]);
-  console.log(bookDetails);
-
-  bookDetails.forEach((element) =>
-    document
-      .getElementsByClassName("searchEngine__book-grid")[0]
-      .appendChild(element)
-  );
+  let searchTerm = document.getElementById("searchEngine__form").value;
+  callAPI(searchTerm);
 });
 
 const createBookCard = (bookObject) => {
@@ -63,46 +57,9 @@ const createBookCard = (bookObject) => {
   outsideDiv.style.maxHeight = "500px";
   outsideDiv.style.maxWidth = "300px";
   outsideDiv.style.fontFamily = "Gloria Hallelujah";
+  document
+    .getElementsByClassName("searchEngine__book-grid")[0]
+    .appendChild(outsideDiv);
+
   return outsideDiv;
 };
-
-const responsePromise = fetch(getSearchUrls(searchTerm));
-const response = await responsePromise;
-const object = await response.json();
-
-//const outsideDiv = document.createElement("div")
-//const heading = document.createElement("h3");
-//const headingText = document.createTextNode()
-//append child - puts textnode inside h3 element then append it to the div
-//p for decription
-//node for paragraph text - parse bookObject.description
-//same for image
-//
-
-// console.log(searchButton);
-// console.log(document.getElementById("searchEngine__form"));
-
-// searchButton.addEventListener("click", () => {
-//   let searchTerm = document.getElementById("searchEngine__form").value;
-//   const getSearchUrls = (searchTerm) => {
-//     return urlMain + searchTerm;
-//   };
-//   const search = async (searchTerm) => {
-//     const requestPromise = fetch(getSearchUrl(searchTerm));
-
-//     const response = await requestPromise;
-//     const searchData = await response.json();
-
-//     const bookDetails = searchData.items.map((volume) => {
-//       const bookOutput = {};
-//       if (volume.volumeInfo.authors)
-//         bookOutput.image = volume.volumeInfo.imageLinks.thumbnail;
-//       bookOutput.title = volume.volumeInfo.title;
-//       bookOutput.author = volume.volumeInfo.authors[0];
-//       bookOutput.description = volume.volumeInfo.description;
-//       return bookOutput;
-//     });
-//     bookDetails.document.getElementsByClassName(
-//       "searchEngine__book-gird__bookOne"
-//     ).innerText = bookDetails;
-//   };
