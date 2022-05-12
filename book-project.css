@@ -79,7 +79,8 @@ button {
   font-family: "Gloria Hallelujah", cursive;
   font-size: 20px;
   padding: 5px;
-  margin: 10px;
+  margin: 20px;
+  margin-bottom: 80px;
 }
 @media only screen and (max-width: 576px) {
   button {
@@ -113,4 +114,16 @@ button:hover {
     display: flex;
     flex-direction: column;
   }
+}
+
+.searchEngine__book-grid div {
+  text-align: center;
+  background-color: white;
+  margin: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  max-height: 500px;
+  max-width: 300px;
+  font-family: "Gloria Hallelujah";
+  overflow-y: auto;
 }
