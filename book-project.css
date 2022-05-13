@@ -21,7 +21,7 @@
 }
 @media only screen and (min-width: 577px) and (max-width: 768px) {
   .searchEngine__image {
-    fmax-width: 300px;
+    max-width: 300px;
     height: 300px;
   }
 }
@@ -46,8 +46,8 @@
 }
 @media only screen and (min-width: 577px) and (max-width: 768px) {
   .searchEngine__main-text {
-    width: 200px;
-    font-size: 10px;
+    width: 400px;
+    font-size: 15px;
   }
 }
 
@@ -61,14 +61,9 @@
   font-family: "Gloria Hallelujah", cursive;
   font-size: 20px;
 }
-@media only screen and (max-width: 576px) {
-  #searchEngine__form {
-    font-size: 10px;
-  }
-}
 @media only screen and (min-width: 577px) and (max-width: 768px) {
   #searchEngine__form {
-    font-size: 10px;
+    font-size: 15px;
   }
 }
 
@@ -80,16 +75,16 @@ button {
   font-size: 20px;
   padding: 5px;
   margin: 20px;
-  margin-bottom: 80px;
+  margin-bottom: 75px;
 }
 @media only screen and (max-width: 576px) {
   button {
-    font-size: 10px;
+    font-size: 15px;
   }
 }
 @media only screen and (min-width: 577px) and (max-width: 768px) {
   button {
-    font-size: 10px;
+    font-size: 15px;
   }
 }
 button:hover {
@@ -101,7 +96,7 @@ button:hover {
   display: grid;
   grid-template-areas: "bookOne bookTwo bookThree" "bookFour bookFive bookSix" "bookSeven bookEight bookNine";
   grid-template-columns: 300px, 300px, 300px;
-  grid-template-rows: 300px, 300px, 300px;
+  grid-template-rows: 300px, 300px, 300px, 300px;
 }
 @media only screen and (max-width: 576px) {
   .searchEngine__book-grid {

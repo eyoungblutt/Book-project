@@ -1,12 +1,9 @@
 const createBookCard = (book) => {
   const outsideDiv = document.createElement("div");
   const image = document.createElement("img");
-  image.src = book.volumeInfo.imageLinks.thumbnail;
-  console.log(image);
-  outsideDiv.appendChild(image);
 
-  image.style.maxHeight = "200px";
-  image.style.maxwidth = "200px";
+  image.src = book.volumeInfo.imageLinks?.thumbnail;
+  outsideDiv.appendChild(image);
 
   const heading = document.createElement("h3");
   const headingText = document.createTextNode(
@@ -14,14 +11,16 @@ const createBookCard = (book) => {
   );
   heading.appendChild(headingText);
   outsideDiv.appendChild(heading);
+
   const author = document.createElement("h4");
-  const authorText = document.createTextNode(book.volumeInfo.authors);
+  const authorText =
+    document.createTextNode(book.volumeInfo.authors) ?? "Written by Kat.";
   outsideDiv.appendChild(author);
   author.appendChild(authorText);
 
   const paragraphDescription = document.createElement("p");
   const paragraphText = document.createTextNode(
-    book.volumeInfo.description ?? "Written by cats."
+    book.volumeInfo.description ?? "Meow, meow, meow."
   );
   outsideDiv.appendChild(paragraphDescription);
   paragraphDescription.appendChild(paragraphText);

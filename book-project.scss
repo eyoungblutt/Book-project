@@ -1,6 +1,7 @@
 @use "colour";
 @use "font";
 @use "media";
+@use "grid";
 
 .searchEngine {
   background: colour.$background-colour;
@@ -21,7 +22,7 @@
     height: 300px;
   }
   @include media.tablet {
-    fmax-width: 300px;
+    max-width: 300px;
     height: 300px;
   }
   @include media.tablet-landscape {
@@ -34,15 +35,14 @@
   font-family: font.$primary-font;
   font-size: 15px;
   border-radius: 10px;
-  // position: absolute;
   width: 700px;
   @include media.phone {
     width: 200px;
     font-size: 10px;
   }
   @include media.tablet {
-    width: 200px;
-    font-size: 10px;
+    width: 400px;
+    font-size: 15px;
   }
 }
 
@@ -56,10 +56,9 @@
   font-family: font.$primary-font;
   font-size: 20px;
   @include media.phone {
-    font-size: 10px;
   }
   @include media.tablet {
-    font-size: 10px;
+    font-size: 15px;
   }
 }
 button {
@@ -67,16 +66,15 @@ button {
   border: 1px solid colour.$highlight-colour;
   border-radius: 10px;
   font-family: font.$primary-font;
-  // font-weight: bold;
   font-size: 20px;
   padding: 5px;
   margin: 20px;
-  margin-bottom: 80px;
+  margin-bottom: 75px;
   @include media.phone {
-    font-size: 10px;
+    font-size: 15px;
   }
   @include media.tablet {
-    font-size: 10px;
+    font-size: 15px;
   }
   &:hover {
     background-color: rgba(0, 0, 0, 0.8);
@@ -85,11 +83,7 @@ button {
 }
 .searchEngine__book-grid {
   display: grid;
-  grid-template-areas:
-    "bookOne bookTwo bookThree" "bookFour bookFive bookSix"
-    "bookSeven bookEight bookNine";
-  grid-template-columns: 300px, 300px, 300px;
-  grid-template-rows: 300px, 300px, 300px;
+  @include grid.grid;
   @include media.phone {
     display: flex;
     flex-direction: column;
