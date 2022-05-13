@@ -8,10 +8,29 @@ const getSearchUrls = (searchTerm) => {
   return urlMain + searchTerm;
 };
 
+const clearResult = () => {
+  document.getElementById("searchEngine__form").vaule = "";
+  document.getElementsByClassName("searchEngine__book-grid").innerText = "";
+};
+const removeAllChildNodes = (parent) => {
+  while (parent.firstChild) {
+    parent.removeChild(parent.firstChild);
+  }
+};
+
+refreshButton.addEventListener("click", () => {
+  clearResult();
+  removeAllChildNodes(
+    document.getElementsByClassName("searchEngine__book-grid")[0]
+  );
+});
+
 const callAPI = async (searchTerm) => {
+  clearResult();
   const responsePromise = fetch(getSearchUrls(searchTerm));
   const response = await responsePromise;
   const object = await response.json();
+  console.log(object);
   object.items.map(createBookCard);
 };
 
