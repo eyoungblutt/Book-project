@@ -26,11 +26,9 @@ refreshButton.addEventListener("click", () => {
 });
 
 const callAPI = async (searchTerm) => {
-  clearResult();
   const responsePromise = fetch(getSearchUrls(searchTerm));
   const response = await responsePromise;
   const object = await response.json();
-  console.log(object);
   object.items.map(createBookCard);
 };
 
